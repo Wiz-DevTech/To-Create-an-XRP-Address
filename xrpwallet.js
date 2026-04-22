@@ -12,7 +12,7 @@ if (!isSubprocess) {
 }
 
 const run = (id, match) => {
-  const re = '^(X.)(' + match.join('|') + ')(.+)$|^(X.+)(' + match.join('|') + ')$'
+  const re = '^(r.)(' + match.join('|') + ')(.+)$|^(X.+)(' + match.join('|') + ')$'
   const regexp = new RegExp(re, 'i')
 
   if (match.length > 0) {
@@ -35,7 +35,7 @@ const run = (id, match) => {
       const address = keypairs.deriveAddress(keypair.publicKey)
       const account = {
         address: address,
-        xaddress: codec.Encode({account:address}),
+        xaddress: address,
         secret: seed
       }
       const test = regexp.exec(account.xaddress)
