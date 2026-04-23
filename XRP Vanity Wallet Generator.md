@@ -21,7 +21,7 @@ npm -v
 
 Clone or download the project:
 
-git clone <repo-url>
+git clone <https://github.com/Wiz-DevTech/To-Create-an-XRP-Address.git>
 cd xrp-vanity-generator
 
 Install dependencies:
